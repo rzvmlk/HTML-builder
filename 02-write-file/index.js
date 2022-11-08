@@ -16,7 +16,9 @@ InputFile.on('data', (input) => {
     if (input.includes('exit')) 
     process.emit('SIGINT');
 });
+
 const finish = () => {
+    console.log('Ok,bye!');
     OutputFile.end();
     InputFile.end();
     process.exit();
